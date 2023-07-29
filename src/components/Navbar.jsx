@@ -7,6 +7,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   return (
     <nav>
+      {/* nav in desktop */}
       <div
         className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
       >
@@ -32,11 +33,19 @@ const Navbar = () => {
 
           <ul className="sm:flex hidden gap-10 list-none  ">
             {navLinks.map((link) => (
-              <li key={link.id}>
+              <li
+                className={`${
+                  active === link.title ? "text-white " : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                key={link.id}
+                onClick={() => setActive(link.title)}
+              >
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
           </ul>
+
+          
         </div>
       </div>
     </nav>
