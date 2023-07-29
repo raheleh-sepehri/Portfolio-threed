@@ -1,16 +1,17 @@
-import { Suspense, useEffect, useState } from "react";
-
-import { Canvas, Div } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  console.log(computer);
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} position={[10, 10, 10]} />
+    <>
+      {/* Add the lights here */}
+      <pointLight intensity={4} />
+      <hemisphereLight intensity={1} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -25,7 +26,7 @@ const Computers = () => {
         position={[0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
-    </mesh>
+    </>
   );
 };
 
@@ -43,6 +44,8 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
+        {/* The ambient light can be kept here */}
+
         <Computers />
       </Suspense>
 
