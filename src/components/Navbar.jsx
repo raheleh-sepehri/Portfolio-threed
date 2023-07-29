@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
+import { close, menu } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+
   return (
     <nav>
       {/* nav in desktop */}
@@ -24,9 +27,9 @@ const Navbar = () => {
               src="./logo.png"
               className="w-10  rounded-full h-10 object-fill"
             />
-            <p className="font-bold text-[18px] cursor-pointer text-white ml-1 ">
-              {" "}
-              Raheleh{" "}
+            <p className="font-bold text-[18px] cursor-pointer text-white ml-1 flex ">
+              
+              Raheleh &nbsp;
               <span className="sm:block hidden">| Frontend Developer</span>
             </p>
           </Link>
@@ -45,7 +48,38 @@ const Navbar = () => {
             ))}
           </ul>
 
-          
+          {/* nav in mobile */}
+
+          <div className="sm:hidden flex flex-1 justify-end items-center ">
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className="w-[28px] h-[28px] cursor-pointer object-contain"
+              onClick={() => setToggle(!toggle)}
+            />
+            <div
+              className={`${
+                toggle ? "flex" : "hidden"
+              } p-4 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            >
+              <ul className="sm:hidden flex list-none flex-col justify-end items-start gap-4  ">
+                {navLinks.map((link) => (
+                  <li
+                    className={`${
+                      active === link.title ? "text-white " : "text-secondary"
+                    } font-poppins text-[16px] font-medium cursor-pointer`}
+                    key={link.id}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(link.title);
+                    }}
+                  >
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
