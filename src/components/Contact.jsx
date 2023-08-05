@@ -15,7 +15,7 @@ const Contact = () => {
   const submitHandler = () => {};
 
   return (
-    <div className="xl:mt-12 flex-col-reverse xl:flex-row  gap-10 overflow-hidden ">
+    <div className="xl:mt-12 flex flex-col-reverse xl:flex-row  gap-10 overflow-hidden ">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] p-8 bg-black-100 rounded-2xl "
