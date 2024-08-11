@@ -87,14 +87,7 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+
   {
     name: "Three JS",
     icon: threejs,
@@ -103,43 +96,54 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  
 ];
 
 const experiences = [
   {
     title: "Frontend Developer",
-    company_name: "Poshesh ",
+    company_name: "Faramehrgostar  ",
     icon: meta,
     iconBg: "#383E56",
-    date: "2019-2021",
+    date: "05.2019-05.2020",
     points: [
-      "Designing appealing and user-friendly interfaces to ensure optimized designs for our products.",
-      "Developing and implementing custom web applications, focusing on React, CSS, HTML, and JavaScript.",
-      "Taking responsibility for front-end implementation using React and JavaScript, including the entire process from conceptualization to specification and development.",
-      "Creating technically and visually sophisticated solutions in the area of relationship management and product configuration, utilizing cutting-edge technologies.",
-      "Troubleshooting and resolving technical challenges that arise.",
+      "Designed and developed custom WordPress websites.",
+      "Installed and configured plugins and themes.",
+      '	Optimized websites for search engines (SEO).',
+      '	Troubleshot and fixed website issues.',
+      'Performed code maintenance and bug fixes to ensure website stability and functionality.',
+      '›	Designed and developed reusable UI components using HTML, CSS, and potentially JavaScript libraries like Bootstrap'
+    ],
+  },
+  {
+    title: "Poshesh",
+    company_name: "Faramehrgostar",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "05.2020-12.2021",
+    points: [
+  '	Designed and developed reusable UI components using HTML, CSS, and potentially JavaScript libraries like Bootstrap',
+  '	Implemented responsive layouts to ensure website functionality and optimal viewing experience across various devices (desktops, tablets, mobiles).',
+  '	Integrated UI elements with back-end APIs to display and interact with data.',
+  '	Created interactive elements like forms, buttons, and animations to enhance user experience ',
+  '	Worked closely with designers to translate design mockups into functional web pages.',
+  '	Performed code maintenance and bug fixes to ensure website stability and functionality.'
     ],
   },
   {
     title: "Frontend Developer",
-    company_name: "Faramehrgostar",
+    company_name: "Entekhab Investment Development Group, Isfahan, Iran",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "2022-Now",
+    date: "2023-Now",
     points: [
-      "Developed modern and appealing user interfaces using React.JS and HTML5/CSS3.",
-      "Collaborated within a multidisciplinary Scrum team as a software developer.",
-      "Took ownership, contributed new ideas, and drove improvements.",
-      "Worked closely with UX designers to implement attractive and user-friendly designs.",
-      "Ensured timely delivery and quality of the developed code.",
+      "	Spearheaded the development and maintenance of cutting-edge, responsive web applications utilizing React, Redux, and Next.js, ensuring optimal user experience and performance.",
+      "	Leveraged SWR to efficiently handle data fetching and posting operations, enhancing website responsiveness and overall user-friendliness.",
+      "	Led the implementation of advanced UI/UX features to enhance user engagement and improve overall usability.",
+      "	Collaborated closely with cross-functional teams including designers and backend developers to ensure seamless integration and delivery of high-quality software solutions.",
+      "	Led the refactoring of codebase, resulting in improved code structure and maintainability, which ultimately contributed to enhanced scalability and development efficiency.",
+      '	Implemented separate user and customer panels, enhancing user experience and facilitating targeted interactions.',
+      '	Utilized Git for version control and collaborated with the team on code reviews and bug fixes.'
     ],
   },
 ];
@@ -191,7 +195,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/raheleh-sepehri",
+    source_code_link: "https://github.com/raheleh-sepehri/rent-car",
   },
   {
     name: "Job IT",
